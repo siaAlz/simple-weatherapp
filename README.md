@@ -1,12 +1,15 @@
-# React + Vite
+#simple weatherapp
+a very simple weather app to practice working with apis , and api calls.
+using openweather api.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+\*\*\* things that i have learned:
 
-Currently, two official plugins are available:
+- got better understanding of how apis work.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* revisited useState , createContext , useContext.
 
-## Expanding the ESLint configuration
+* worked with handling errors .
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* implemented a simple but quite smart loading indicator.
+
+* helper and service functions got a little more comperhensive to me.
