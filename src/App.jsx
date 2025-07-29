@@ -47,8 +47,8 @@ function Form() {
         const data = await res.json();
 
         console.log(data);
-        if (data.cod === "404") {
-          alert("city not found !");
+        if (!data.cod === "200") {
+          alert(`Errot ${data.message}`);
           return;
         }
         if (cities.some((c) => c.city === data.name)) {
