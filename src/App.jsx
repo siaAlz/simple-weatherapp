@@ -47,14 +47,17 @@ function Form() {
         const data = await res.json();
 
         console.log(data);
-        if (!data.cod === "200") {
+        console.log(data.cod !== "200");
+        if (data.cod !== "200") {
           alert(`Errot ${data.message}`);
+          console.log("wtf");
           return;
         }
         if (cities.some((c) => c.city === data.name)) {
           alert("city already added");
           return;
         }
+        console.log("passed the conditions");
         setCities((prevCities) => {
           const updatedCities = [
             ...prevCities,
