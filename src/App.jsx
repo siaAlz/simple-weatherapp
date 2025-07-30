@@ -46,11 +46,8 @@ function Form() {
         const res = await fetch(api);
         const data = await res.json();
 
-        console.log(data);
-        console.log(data.cod !== "200");
-        if (data.cod !== "200") {
-          alert(`Errot ${data.message}`);
-          console.log("wtf");
+        if (data.cod !== "200" && data.cod !== 200) {
+          alert(`Error ${data.message}`);
           return;
         }
         if (cities.some((c) => c.city === data.name)) {
