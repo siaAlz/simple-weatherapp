@@ -13,3 +13,5 @@ using openweather api.
 * implemented a simple but quite smart loading indicator.
 
 * helper and service functions got a little more comperhensive to me.
+
+* used local storage to store store weahter after browser closed.

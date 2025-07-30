@@ -2,7 +2,10 @@ import { createContext, useContext, useState } from "react";
 const CitiesContext = createContext(null);
 
 function CitiesProvider({ children }) {
-  const [cities, setCities] = useState([]);
+  const [cities, setCities] = useState(() => {
+    const savedState = localStorage.getItem("state");
+    return savedState ? JSON.parse(savedState) : [];
+  });
   const [isLoading, setIsLoading] = useState(false);
 
   return (

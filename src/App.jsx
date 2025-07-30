@@ -55,17 +55,21 @@ function Form() {
           alert("city already added");
           return;
         }
-        setCities((cities) => [
-          ...cities,
-          {
-            city: data.name,
-            temp: data.main.temp,
-            weather: data.weather.at(0).main,
-            emoji: `https://openweathermap.org/img/wn/${
-              data.weather.at(0).icon
-            }@2x.png`,
-          },
-        ]);
+        setCities((prevCities) => {
+          const updatedCities = [
+            ...prevCities,
+            {
+              city: data.name,
+              temp: data.main.temp,
+              weather: data.weather.at(0).main,
+              emoji: `https://openweathermap.org/img/wn/${
+                data.weather.at(0).icon
+              }@2x.png`,
+            },
+          ];
+          localStorage.setItem("state", JSON.stringify(updatedCities));
+          return updatedCities;
+        });
         setQueryCity("");
       } catch (error) {
         alert("failed to fetch weather data");
